@@ -15,4 +15,10 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
+
+    # custom models
+    path('getData', getData.as_view(), name="getData"),
+    path('putData', putData.as_view(), name="putData"),
+
+
 ]

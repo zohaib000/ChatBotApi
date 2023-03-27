@@ -1,4 +1,3 @@
-from os import stat
 from django.contrib.auth.models import User
 from pkgutil import get_data
 from django.http import JsonResponse
@@ -28,6 +27,21 @@ def get_tokens_for_user(user):
         'refresh': str(refresh),
         'access': str(refresh.access_token),
     }
+
+
+class getData(APIView):
+    def get(self, request):
+        data = Data.objects.get(id=1)
+        seria = DataSerializer(data)
+        return Response(seria.data, status=status.HTTP_200_OK)
+
+
+class putData(APIView):
+    def post(self, request):
+        seria = DataSerializer(data=request.data)
+        if (seria.is_valid()):
+            seria.save()
+            return Response({'msg': 'Data has been saved !'}, status=status.HTTP_201_CREATED)
 
 
 class UserRegistrationView(APIView):

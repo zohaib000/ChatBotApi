@@ -10,6 +10,11 @@ status = (
 )
 
 
+class Data(models.Model):
+    url = models.CharField(max_length=11500)
+    api_key = models.CharField(max_length=11500)
+
+
 class Todo(models.Model):
     Title = models.CharField(max_length=500)
     Description = models.TextField()

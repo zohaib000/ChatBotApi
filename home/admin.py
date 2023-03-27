@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import *
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 # Register your models here.
-MODELS = [Todo]
+MODELS = [Todo, Data]
 
 for MODEL in MODELS:
     @admin.register(MODEL)
