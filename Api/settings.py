@@ -137,7 +137,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 # will be changed with llive url
-CSRF_TRUSTED_ORIGINS = ['https://chatbotapi-production-aa0c.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://chatbotapi-production-aa0c.up.railway.app']
 # CORS_ALLOWED_ORIGINS = [
 #     "http://localhost:8000",
 #     "http://127.0.0.1:8000",
