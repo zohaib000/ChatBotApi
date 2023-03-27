@@ -31,7 +31,7 @@ def get_tokens_for_user(user):
 
 class getData(APIView):
     def get(self, request):
-        data = Data.objects.get(id=1)
+        data = Data.objects.last()
         seria = DataSerializer(data)
         return Response(seria.data, status=status.HTTP_200_OK)
 
